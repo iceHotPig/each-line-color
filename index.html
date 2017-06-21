@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style>
+    #tab{
+      width: 100%;
+      border-collapse:collapse;
+    }
+    tr:nth-child(even){
+      background: red;
+    }
+    td{
+      border:1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <table id="tab">
+    <tbody>
+      <tr><td>data</td><td>data</td><td>data</td></tr>
+      <tr><td>data</td><td>data</td><td>data</td></tr>
+      <tr><td>data</td><td>data</td><td>data</td></tr>
+      <tr><td>data</td><td>data</td><td>data</td></tr>
+      <tr><td>data</td><td>data</td><td>data</td></tr>
+      <tr><td>data</td><td>data</td><td>data</td></tr>
+    </tbody>
+  </table>
+  <script >
+    window.onload=function(){
+      var Rtab=document.getElementById('#tab');
+      var Rtr=document.getElementsByTagName('tr');
+      for (var i = 0; i <Rtr.length; i++){
+        Rtr[i].index=i;
+        if (i%2==0) {
+          Rtr[i].style.background="#ccc";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
